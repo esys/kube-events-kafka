@@ -1,0 +1,43 @@
+{
+  "verb": "ADDED",
+  "event": {
+    "metadata": {
+      "name": "nginx.1652714fc3c5f413",
+      "namespace": "default",
+      "selfLink": "/api/v1/namespaces/default/events/nginx.1652714fc3c5f413",
+      "uid": "74294f9f-ccc5-458c-a796-7aa18a7fdef1",
+      "resourceVersion": "7427",
+      "creationTimestamp": "2020-12-20T13:56:44Z",
+      "managedFields": [
+        {
+          "manager": "k3s",
+          "operation": "Update",
+          "apiVersion": "v1",
+          "time": "2020-12-20T13:56:44Z"
+        }
+      ]
+    },
+    "involvedObject": {
+      "kind": "Pod",
+      "namespace": "default",
+      "name": "nginx",
+      "uid": "fba1b4d0-3688-4530-a2cc-b3d3fe95e3f7",
+      "apiVersion": "v1",
+      "resourceVersion": "7420",
+      "fieldPath": "spec.containers{nginx}"
+    },
+    "reason": "Started",
+    "message": "Started container nginx",
+    "source": {
+      "component": "kubelet",
+      "host": "k3d-kafka-server-0"
+    },
+    "firstTimestamp": "2020-12-20T13:56:44Z",
+    "lastTimestamp": "2020-12-20T13:56:44Z",
+    "count": 1,
+    "type": "Normal",
+    "eventTime": null,
+    "reportingComponent": "",
+    "reportingInstance": ""
+  }
+}

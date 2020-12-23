@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: events-fanout
+  name: events-fanout
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: events-fanout
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: events-fanout
+    spec:
+      containers:
+        - image: $IMAGE
+          name: events-fanout
+          command: [ "./events-fanout"]
+          args:
+            - -logLevel=info
+          env:
+            - name: ENDPOINT
+              value: kube-events-kafka-bootstrap:9092
+            - name: TOPIC
+              value: cluster-events
